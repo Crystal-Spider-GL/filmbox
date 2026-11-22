@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="FilmBox — онлайн-кинотеатр без рекламы в 4K на любом устройстве. 40 дней бесплатно.">
+    <title>FilmBox - Фильмы и сериалы</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Шапка -->
+    <header class="header">
+        <div class="container header-container">
+            <div class="logo">
+                <span class="logo-icon">🎬</span> FilmBox
+            </div>
+            <nav class="nav">
+                <a href="#features" class="nav-link">Фильмы</a>
+                <a href="#features" class="nav-link">Сериалы</a>
+                <a href="#pricing" class="nav-link">Тарифы</a>
+            </nav>
+            <div class="header-actions">
+                <button class="btn btn-small">Попробовать бесплатно</button>
+                <button class="burger-menu" id="burgerMenu" aria-label="Открыть меню" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+        <!-- Мобильное меню -->
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="#features" class="nav-link">Фильмы</a>
+            <a href="#features" class="nav-link">Сериалы</a>
+            <a href="#pricing" class="nav-link">Тарифы</a>
+            <button class="btn btn-small" style="margin-top: 10px;">Попробовать бесплатно</button>
+        </div>
+    </header>
+
+    <!-- Основной контент -->
+    <main>
+        <!-- Hero секция -->
+        <section class="hero">
+            <div class="hero-bg">
+                <img src="https://cdn.culture.ru/images/ecee86c6-3d9b-5fe9-a5c9-8a4409e4458c" alt="Кинотеатр">
+            </div>
+
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <h1>Все фильмы и сериалы <br>в одном месте</h1>
+                    <p class="hero-subtitle">Смотри без рекламы. В 4K.<br>На любом устройстве.</p>
+                    <button class="btn btn-large btn-cta" id="heroCtaBtn">
+                        Смотреть<br>40 дней бесплатно
+                    </button>
+                    <p class="hero-note">Отмена в любой момент.<br>Карта не требуется сразу.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Секция преимуществ -->
+        <section class="features" id="features">
+            <div class="container">
+                <h2>Почему выбирают нас</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <h3>Без рекламы</h3>
+                        <p>Никаких вставок и баннеров во время просмотра</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>4K и HDR</h3>
+                        <p>Максимальное качество картинки</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>На любом устройстве</h3>
+                        <p>Телефон, планшет, телевизор, ноутбук</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Секция с призывом (CTA) -->
+        <section class="cta-section" id="pricing">
+            <div class="container cta-container">
+                <h2 class="glow-text">Оформи подписку <br>прямо сейчас</h2>
+                <button class="btn btn-large btn-yellow" id="pricingBtn">Выбрать тариф</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Подвал -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-col">
+                <h3>FilmBox</h3>
+                <p>Онлайн-кинотеатр<br>нового поколения</p>
+            </div>
+            <div class="footer-col">
+                <h4>О сервисе</h4>
+                <a href="#pricing">Тарифы</a>
+                <a href="#features">Помощь</a>
+            </div>
+            <div class="footer-col">
+                <h4>Поддержка</h4>
+                <a href="mailto:support@filmbox.ru">support@filmbox.ru</a>
+                <a href="tel:+79991234567">+7 (999) 123-45-67</a>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>© 2026 FilmBox. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+</html>

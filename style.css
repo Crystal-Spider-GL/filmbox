@@ -1,0 +1,451 @@
+/* Сброс стилей */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth; /* Плавный скролл для якорей */
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #111;
+    color: #fff;
+    line-height: 1.5;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Контейнер */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Кнопки */
+.btn {
+    background-color: #fbbf24;
+    color: #000;
+    border: none;
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+    font-family: inherit;
+}
+
+.btn:hover {
+    background-color: #f59e0b;
+    transform: scale(1.05);
+}
+
+.btn:focus-visible {
+    outline: 3px solid #fbbf24;
+    outline-offset: 3px;
+}
+
+.btn-small {
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 20px;
+}
+
+.btn-large {
+    padding: 15px 40px;
+    font-size: 18px;
+    width: 100%;
+    max-width: 300px;
+    display: block;
+}
+
+.btn-cta {
+    text-align: left;
+    line-height: 1.2;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    background: linear-gradient(90deg, #fbbf24, #f59e0b);
+    box-shadow: 0 4px 15px rgba(251, 191, 36, 0.3);
+}
+
+.btn-cta:hover {
+    box-shadow: 0 6px 20px rgba(251, 191, 36, 0.5);
+}
+
+/* Шапка */
+.header {
+    background-color: #000;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid #333;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-icon {
+    font-size: 28px;
+}
+
+.nav {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-link {
+    font-size: 16px;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+.nav-link:hover {
+    color: #fbbf24;
+}
+
+/* Бургер меню */
+.burger-menu {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.burger-menu span {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 2px;
+    transition: background-color 0.2s;
+}
+
+.burger-menu:hover span {
+    background-color: #fbbf24;
+}
+
+.mobile-menu {
+    display: none;
+    flex-direction: column;
+    background-color: #000;
+    padding: 20px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    border-bottom: 1px solid #333;
+    gap: 15px;
+}
+
+.mobile-menu.active {
+    display: flex;
+    max-height: calc(100vh - 60px);
+    overflow-y: auto;
+}
+
+/* Hero Секция */
+.hero {
+    position: relative;
+    max-width: 1920px;
+    margin: 0px auto;
+    min-height: 500px;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.hero-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 30%;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0) 100%);
+    z-index: 2;
+}
+
+.hero-container {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    padding-left: 5%;
+}
+
+.hero-content {
+    max-width: 550px;
+    color: #fff;
+}
+
+/* Секция преимуществ */
+.features {
+    padding: 80px 0;
+    text-align: center;
+    background-color: #0a0a0a;
+}
+
+.features h2 {
+    font-size: 40px;
+    margin-bottom: 50px;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.feature-card {
+    background: linear-gradient(180deg, #444 0%, #222 100%);
+    padding: 40px 20px;
+    border-radius: 12px;
+    border: 1px solid #555;
+    text-align: left;
+}
+
+.feature-card h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.feature-card p {
+    color: #ccc;
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+/* CTA Секция */
+.cta-section {
+    padding: 100px 0;
+    background: radial-gradient(circle at center, rgba(251, 191, 36, 0.15) 0%, rgba(0,0,0,1) 70%);
+    text-align: center;
+}
+
+.cta-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.glow-text {
+    font-size: 48px;
+    font-weight: 800;
+    color: #fbbf24;
+    text-shadow: 0 0 20px rgba(251, 191, 36, 0.5);
+    line-height: 1.2;
+}
+
+.btn-yellow {
+    background-color: #fbbf24;
+    color: #000;
+    padding: 18px 60px;
+    font-size: 20px;
+    border-radius: 10px;
+    max-width: none;
+}
+
+/* Футер */
+.footer {
+    background-color: #0a0a0a;
+    padding: 60px 0 20px;
+    border-top: 1px solid #222;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-col h4 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.footer-col p, .footer-col a {
+    color: #888;
+    font-size: 14px;
+    line-height: 1.8;
+    display: block;
+    margin-bottom: 5px;
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    transition: color 0.2s, text-decoration-color 0.2s;
+}
+
+.footer-col a:hover {
+    color: #fff;
+    text-decoration-color: #fff;
+}
+
+.footer-bottom {
+    text-align: left;
+    padding-top: 20px;
+    border-top: 1px solid #222;
+    color: #666;
+    font-size: 14px;
+}
+
+/* --- Планшеты --- */
+@media (max-width: 992px) {
+
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .glow-text {
+        font-size: 38px;
+    }
+
+    .hero-content {
+        max-width: 480px;
+    }
+}
+
+/* --- Телефоны --- */
+@media (max-width: 768px) {
+    .nav, .header-actions .btn-small {
+        display: none;
+    }
+
+    .burger-menu {
+        display: flex;
+    }
+
+    .header-actions {
+        gap: 10px;
+    }
+
+    .hero {
+        margin: 0;
+        border-radius: 0;
+        aspect-ratio: auto;
+        background-position: center;
+        padding-top: 100px;
+        padding-bottom: 50px;
+        height: auto;
+    }
+
+    .hero::before {
+        background: rgba(0, 0, 0, 0.5);
+    }
+
+    .hero-container {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .hero-content {
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+        margin-top: 20px;
+        line-height: 1.2;
+    }
+
+    .hero-subtitle {
+        font-size: 16px;
+        margin-top: 15px;
+    }
+
+    .btn-cta {
+        margin: 25px auto;
+        text-align: center;
+    }
+
+    .hero-note {
+        font-size: 14px;
+        opacity: 0.8;
+    }
+
+    .features h2 {
+        font-size: 28px;
+        margin-bottom: 30px;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .feature-card {
+        padding: 25px;
+    }
+
+    .cta-section {
+        padding: 60px 0;
+    }
+
+    .glow-text {
+        font-size: 32px;
+    }
+
+    .btn-yellow {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .footer-bottom {
+        text-align: center;
+    }
+}
